@@ -1,0 +1,71 @@
+@import '../plugins/rupture';
+
+@import '../utils/easings'
+@import '../variables/fonts'
+@import '../variables/colors'
+
+.-o-title-1
+  margin 0
+  font-family $font-title
+  font-size 6rem
+  font-weight 600
+
+  +above($bp-tablet)
+    font-size 8rem
+
+.-o-title-2
+  margin 0
+  font-family $font-title
+  font-size 4rem
+  font-weight 600
+
+  +above($bp-tablet)
+    font-size 6rem
+
+.-o-text
+  font-family $font-default
+  font-size 1.6rem
+  font-weight 300
+  color $text-color-default
+
+  &-featured
+    font-size 1.8rem
+    text-align center
+
+  &-secondary
+    color $text-color-secondary
+
+  &-italic
+    font-style italic
+
+  &-bold
+    font-weight bold
+
+  &-uppercase
+    text-transform uppercase
+
+  &-pre
+    white-space pre-line
+
+.-o-link
+  text-decoration none
+  color inherit
+
+.-o-text-link
+  position relative
+
+  &:after
+    content ''
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    height 1px
+    background-color currentColor
+    transition transform 0.3s $ease-in-out-quart
+    transform-origin left
+
+  &:hover
+    &:after
+      transform scaleX(0)
+      transform-origin right

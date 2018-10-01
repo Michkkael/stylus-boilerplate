@@ -1,0 +1,24 @@
+/**
+ * Rupture
+ * docs: https://github.com/jescalan/rupture
+ */
+
+@import '~rupture/rupture/index'
+@import '../variables/breakpoints'
+
+rupture.mobile-cutoff = $bp-mobile
+rupture.desktop-cutoff = $bp-desktop
+rupture.hd-cutoff = $bp-large-desktop
+
+rupture.scale = 0 $bp-mobile $bp-large-mobile $bp-tablet $bp-desktop $bp-large-desktop
+
+rupture.base-font-size = 10px
+
+rupture.anti-overlap = -1px
+
+/*
+rupture.scale =       0          mobile     large-mobile     tablet       desktop    larger-desktop
+                      └─────┬─────┘ └─────┬─────┘ └─────┬─────┘ └─────┬─────┘ └─────┬─────┘ └─────┬────
+Slice numbers:              1             2             3             4             5             6
+rupture.scale-names:       'xs'          's'           'm'           'l'           'xl'          'hd'
+*/

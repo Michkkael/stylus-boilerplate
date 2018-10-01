@@ -1,0 +1,45 @@
+/**
+ * GLOBAL STYLE
+ */
+
+/* Fonts import */
+@import './utils/mixins'
+
+font-face('Montserrat', '../fonts/montserrat/Montserrat-Light', 300, normal, woff2 woff)
+font-face('Montserrat', '../fonts/montserrat/Montserrat-Regular', 400, normal, woff2 woff)
+font-face('Montserrat', '../fonts/montserrat/Montserrat-Bold', 400, normal, woff2 woff)
+
+/*
+ * Plugins
+ * place here any css plugin as global
+ */
+@import './plugins/normalize'
+@import './plugins/rupture'
+
+/*
+ * Global CSS
+ */
+@import './variables/colors'
+@import './variables/fonts'
+
+@import './utils/helpers'
+
+// Import all CSS objects to use them in all the project as CSS classes
+@import './objects/layout'
+@import './objects/typography'
+
+html
+  @extends $font-smooth
+  height 100%
+  font-size 62.5%
+  background-color $site-background-color
+
+body
+  @extends .-o-text
+
+a
+  @extends .-o-link
+  -webkit-tap-highlight-color transparent
+
+// p
+  // line-height: 1.4

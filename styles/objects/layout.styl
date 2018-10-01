@@ -1,0 +1,42 @@
+@import '../plugins/rupture';
+
+$sizes = {
+  xs: $bp-mobile
+  s: $bp-large-mobile
+  m: $bp-tablet
+  l: $bp-desktop
+  xl: $bp-large-desktop
+}
+
+.-o-container
+  padding-left 2rem
+  padding-right 2rem
+
+  +between($bp-large-mobile, $bp-tablet)
+    padding-left 4rem
+    padding-right 4rem
+
+  +above($bp-tablet)
+    padding-left 8rem
+    padding-right 8rem
+
+/*
+ * Size Full width
+ * useful if you want a full width content in the layout
+ */
+.-o-size-full
+  position relative
+  width 100vw
+  left 50%
+  margin-left -50vw
+
+/*
+ * Sizes (XS, S, M, L, XL, and others)
+ * usage:
+ * <p class=".-o-size-m">Size M</p>
+ */
+for name, size in $sizes
+  .-o-size-{name}
+    margin-left auto
+    margin-right auto
+    max-width size
